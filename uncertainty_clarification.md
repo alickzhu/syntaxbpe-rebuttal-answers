@@ -1,15 +1,19 @@
 # Corrected confidence intervals and per-task outcomes
 
-We corrected an error in the confidence-interval computation. The pass@1 point estimates are unchanged. The corrected intervals below supersede the previously reported HE+ and MBPP+ intervals; all eight remain above zero.
+We have corrected an implementation issue in the confidence-interval calculation. The pass@1 point estimates are unchanged. The intervals below supersede the previously reported HE+ and MBPP+ intervals. Seven of the eight intervals exclude zero; the SFT 3B MBPP+ interval has a lower endpoint of zero.
 
 Each cell reports the SyntaxBPE-minus-GPT-5-style pass@1 difference in percentage points, followed by its pointwise 95% paired hierarchical-bootstrap confidence interval.
 
 | Stage | Size | HE+ | MBPP+ |
 |---|---|---|---|
-| Base | 1B | +3.5 [+0.8, +6.3] | +1.7 [+0.2, +3.3] |
-| Base | 3B | +1.5 [+0.2, +2.7] | +1.6 [+0.2, +3.0] |
-| SFT | 1B | +2.3 [+0.2, +4.3] | +3.0 [+0.3, +5.9] |
-| SFT | 3B | +1.6 [+0.2, +3.2] | +2.2 [+0.1, +4.3] |
+| Base | 1B | +3.5 [+1.2, +5.9] | +1.7 [+0.1, +3.3] |
+| Base | 3B | +1.5 [+0.2, +2.9] | +1.6 [+0.1, +3.1] |
+| SFT | 1B | +2.3 [+0.2, +4.3] | +3.0 [+0.4, +5.5] |
+| SFT | 3B | +1.6 [+0.2, +3.2] | +2.2 [+0.0, +4.4] |
+
+## Reproducing the intervals
+
+Run `python recompute_intervals.py` from this repository. The [script](recompute_intervals.py) uses 5,000 bootstrap replicates and random seed 42 independently for each dataset. Each replicate resamples tasks with replacement, sharing the task resample between models, and independently resamples the 10 binary completion outcomes within each sampled model–task cell. The bounds are the 2.5th and 97.5th percentiles, using linear interpolation; the table rounds to one decimal place. The script reads the supplied pass/fail labels and does not re-execute generated code.
 
 ## Per-task outcomes
 
