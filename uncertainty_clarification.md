@@ -1,15 +1,15 @@
 # Corrected confidence intervals and per-task outcomes
 
-We have corrected an implementation issue in the confidence-interval calculation. The pass@1 point estimates are unchanged. The intervals below supersede the previously reported HE+ and MBPP+ intervals. Six of the eight intervals exclude zero; the Base 3B and SFT 3B HE+ intervals include zero.
+We have corrected an implementation issue in the confidence-interval calculation. The pass@1 point estimates are unchanged. The intervals below supersede the previously reported HE+ and MBPP+ intervals. The Base 1B HE+ interval excludes zero; the other seven intervals include zero.
 
 Each cell reports the SyntaxBPE-minus-GPT-5-style pass@1 difference in percentage points, followed by its pointwise 95% paired hierarchical-bootstrap confidence interval.
 
 | Stage | Size | HE+ | MBPP+ |
 |---|---|---|---|
-| Base | 1B | +3.5 [+0.4, +6.6] | +1.7 [+0.1, +3.3] |
-| Base | 3B | +1.5 [-0.5, +3.5] | +1.6 [+0.1, +3.1] |
-| SFT | 1B | +2.3 [+0.2, +4.4] | +3.0 [+0.6, +5.5] |
-| SFT | 3B | +1.6 [-0.5, +3.9] | +2.2 [+0.2, +4.2] |
+| Base | 1B | +3.5 [+1.3, +5.9] | +1.7 [-0.7, +3.9] |
+| Base | 3B | +1.5 [-0.9, +3.9] | +1.6 [-0.6, +3.7] |
+| SFT | 1B | +2.3 [-1.5, +6.2] | +3.0 [-0.4, +6.4] |
+| SFT | 3B | +1.6 [-1.8, +5.3] | +2.2 [-0.2, +4.5] |
 
 ## Reproducing the intervals
 
