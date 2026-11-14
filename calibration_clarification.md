@@ -20,10 +20,6 @@ This supplement lists the **592 eligible Stage-I decision candidates** and the c
 
 ## Eligible candidates
 
-Eligibility: occurrence count ≥1,000 and representation in at least 10 of the 20 shards. Groups: five broad lexical decisions, 556 punctuation-pair decisions, 31 symbol-prefix decisions.
-
-The table below includes the per-candidate LCB values. The LCB-based decision is OPEN when LCB > 0 and SPLIT otherwise. This rule gives 47 OPEN candidates: five broad lexical decisions, 38 punctuation-pair decisions, and four symbol-prefix decisions.
-
 | # | Operator | Symbol / pattern | LCB (BPB) | LCB-based decision |
 |---:|---|---|---:|---|
 | 1 | O1 | — (family-level rule) | +1.11e-02 | OPEN |
