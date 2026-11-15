@@ -1,13 +1,13 @@
 # Corrected confidence intervals and per-task outcomes
 
-We have corrected an implementation issue in the confidence-interval calculation. The pass@1 point estimates are unchanged. The table below reports the updated intervals for MultiPL-E, HE+, MBPP, and MBPP+. All four MultiPL-E intervals exclude zero. Across the 16 comparisons, six intervals exclude zero and ten include zero.
+We have corrected an implementation issue in the confidence-interval calculation. The reported pass@1 point estimates are unchanged at one-decimal precision. The table below reports the updated intervals for MultiPL-E, HE+, MBPP, and MBPP+. All four MultiPL-E intervals exclude zero. Across the 16 comparisons, six intervals exclude zero and ten include zero.
 
 Each cell reports the SyntaxBPE-minus-GPT-5-style pass@1 difference in percentage points, followed by its pointwise 95% paired hierarchical-bootstrap confidence interval.
 
 | Stage | Size | MultiPL-E Avg. | HE+ | MBPP | MBPP+ |
 |---|---|---|---|---|---|
-| Base | 1B | +1.9 [+0.8, +3.0] | +3.5 [+1.3, +5.8] | +1.6 [-1.4, +4.7] | +1.7 [-0.5, +3.9] |
-| Base | 3B | +2.0 [+0.7, +3.3] | +1.5 [-0.8, +4.0] | +3.2 [+0.1, +6.3] | +1.6 [-0.4, +3.7] |
+| Base | 1B | +1.9 [+0.6, +3.1] | +3.5 [+1.3, +5.8] | +1.6 [-0.4, +3.6] | +1.7 [-0.5, +3.9] |
+| Base | 3B | +2.0 [+0.6, +3.4] | +1.5 [-0.8, +4.0] | +3.2 [+0.8, +5.5] | +1.6 [-0.4, +3.7] |
 | SFT | 1B | +2.8 [+0.8, +4.9] | +2.3 [-1.6, +6.3] | +1.8 [-1.2, +4.9] | +3.0 [-0.5, +6.6] |
 | SFT | 3B | +2.3 [+0.7, +4.0] | +1.6 [-2.1, +5.4] | +1.8 [-0.6, +4.2] | +2.2 [-0.1, +4.5] |
 
