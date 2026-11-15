@@ -1,6 +1,6 @@
 # Corrected confidence intervals and per-task outcomes
 
-We have corrected an implementation issue in the confidence-interval calculation. The reported pass@1 point estimates are unchanged at one-decimal precision. The table below reports the updated intervals for MultiPL-E, HE+, MBPP, and MBPP+. All four MultiPL-E intervals exclude zero. Across the 16 comparisons, six intervals exclude zero and ten include zero.
+We have corrected an implementation issue in the confidence-interval calculation. The table below reports the updated intervals for MultiPL-E, HE+, MBPP, and MBPP+. All four MultiPL-E intervals exclude zero. Across the 16 comparisons, six intervals exclude zero and ten include zero.
 
 Each cell reports the SyntaxBPE-minus-GPT-5-style pass@1 difference in percentage points, followed by its pointwise 95% paired hierarchical-bootstrap confidence interval.
 
